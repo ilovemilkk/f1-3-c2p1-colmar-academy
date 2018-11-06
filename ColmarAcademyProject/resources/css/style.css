@@ -1,0 +1,326 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+.caption {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  line-height: normal;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  color: #666;
+}
+
+a:hover {
+  cursor: pointer;
+  color: dodgerblue;
+  transition: color, 2s, ease-in, 0.3s;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  /*max-width: 1200px;*/
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  top: 4rem;
+  position: relative;
+}
+
+header {
+  height: 4rem;
+  width: 100%;
+  background-color: sandybrown;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 10;
+  transition: opacity, 2s, ease-out, 0.2s;
+}
+
+header:hover {
+  opacity: 1;
+  transition: opacity, 2s, ease-in, 0.2s;
+}
+
+.logo,
+.copyright {
+  flex-grow: 1;
+}
+
+.logo img {
+  padding-left: 1.5rem;
+  padding-right: 0.25rem;
+}
+
+.colmar {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.academy {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: white
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+nav li a {
+  color: #666;
+}
+
+nav {
+  margin-right: 2rem;
+}
+.mobile {
+  display: none;
+}
+
+.banner,
+.learning {
+  background-color: bisque;
+}
+
+.banner img {
+  width: 60%;
+  margin-right: 2.5rem;
+  height: auto;
+}
+
+.banner .title {
+  width: 28%;
+}
+
+.main-section img,
+.main-section video {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+#campus,
+.thesis {
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 480px;
+  flex-direction: column;
+  margin-top: -1rem;
+}
+
+.sidebar .item {
+  padding-right: 0.5rem;
+}
+
+.sidebar .item:hover {
+  background-color: Gainsboro;
+  transition: background-color .1s ease-in 0s;
+}
+
+.sidebar img {
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+.read-more a {
+  color: orange;
+}
+
+.start-btn {
+  background-color: #444;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #666;
+  transition: background-color 0.2s ease-in 0s;
+  cursor: pointer;
+}
+
+.main-section {
+  width: 60%;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+
+.learning {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.learning .title,
+.thesis .title {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.learning .item {
+  height: 316px;
+  width: 25%;
+  margin: 1rem;
+  background-color: white;
+}
+
+.learning .item:hover {
+  background-color: silver;
+  transition: all 0.1s ease-in;
+}
+
+.learning img {
+  width: 100%;
+  height: auto;
+}
+
+.learning .content {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.thesis .title h1 {
+  margin-bottom: -1rem;
+}
+
+footer{
+  font-size: 0.75rem;
+  color: silver;
+  border-top: 2px solid whitesmoke;
+}
+
+/*Mobile styling*/
+@media only screen and (max-width: 640px) {
+
+  .mobile {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  header .mobile {
+    justify-content: space-around;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  nav a:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+    border-bottom: 2px solid orange;
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .banner .title {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .sidebar,
+  .sidebar img,
+  .sidebar .content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sidebar .content {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .sidebar .item {
+    flex-direction: column;
+  }
+
+  .learning {
+    background-color: white;
+  }
+
+  .learning .item {
+    height: auto;
+    width: 100%;
+    background-color: aliceblue;
+  }
+
+  .learning .item img,
+  .learning .item h4,
+  .learning .item p{
+    display: none;
+  }
+
+  .thesis .main-section {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  footer .copyright,
+  footer nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
